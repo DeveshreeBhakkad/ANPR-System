@@ -76,6 +76,11 @@ cv2.destroyAllWindows()
 x, y, w, h = cv2.boundingRect(plate_cnt)
 plate_img = gray[y:y+h, x:x+w]
 
+plate_img = cv2.threshold(
+    plate_img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU
+)[1]
+plate_img = cv2.bitwise_not(plate_img)
+
 cv2.namedWindow("Number Plate", cv2.WINDOW_NORMAL)
 cv2.imshow("Number Plate", plate_img)
 center_window("Number Plate", plate_img)
