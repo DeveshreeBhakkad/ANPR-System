@@ -21,10 +21,10 @@ The goal of this project is **not to claim an industry-grade system**, but to:
 ✔ Performs text recognition using **EasyOCR**  
 ✔ Applies **post-processing** to clean OCR output  
 ✔ Handles real-world challenges such as:
-- Indian plate fonts
-- logos like `IND`
-- borders and uneven spacing
-- partial detection failures  
+     - Indian plate fonts
+     - logos like `IND`
+     - borders and uneven spacing
+     - partial detection failures  
 ✔ Displays the detected plate and recognized text on the image  
 
 ---
@@ -32,9 +32,9 @@ The goal of this project is **not to claim an industry-grade system**, but to:
 ## 🧠 Why This Project Exists
 
 While ANPR is a widely used application, implementing it on **Indian number plates** highlights important challenges:
-- OCR struggles with stylized fonts
-- plate borders interfere with detection
-- classical CV methods fail on many real-world cases
+   - OCR struggles with stylized fonts
+   - plate borders interfere with detection
+   - classical CV methods fail on many real-world cases
 
 This project helped me **bridge the gap between academic approaches and real-world engineering realities**.
 
@@ -80,11 +80,11 @@ This project helped me **bridge the gap between academic approaches and real-wor
 This project clearly acknowledges its limitations:
 
 - OCR may misinterpret characters due to **Indian plate fonts**
-  - Example: `W` detected as `N`
+    - Example: `W` detected as `N`
 - Trailing characters close to plate borders may be missed
 - Contour-based detection fails for:
-  - rounded plates
-  - broken or merged boundaries
+    - rounded plates
+    - broken or merged boundaries
 - Stock images with watermarks introduce OCR noise
 
 These limitations demonstrate **why real-world ANPR systems rely on deep learning–based detection models**.
@@ -135,9 +135,9 @@ ANPR-System/
 This project represents a **baseline ANPR implementation** created to learn, experiment, and understand real-world constraints in computer vision and OCR.
 
 It reflects:
-- honest engineering decisions
-- practical debugging
-- and a learning-first mindset
+  - honest engineering decisions
+  - practical debugging
+  - and a learning-first mindset
 
 ---
 
