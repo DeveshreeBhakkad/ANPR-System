@@ -5,7 +5,7 @@ import re
 reader = easyocr.Reader(['en'], gpu=False)
 
 # ---------------- Load image ----------------
-img = cv2.imread("Images/img1.webp")
+img = cv2.imread("Images/img1.jpg")
 if img is None:
     raise FileNotFoundError("Image not found")
 
