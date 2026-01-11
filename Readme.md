@@ -25,6 +25,7 @@ The goal of this project is **not to claim an industry-grade system**, but to:
    - logos like `IND`<br>
    - borders and uneven spacing<br>
    - partial detection failures  <br>
+
 ✔ Displays the detected plate and recognized text on the image  
 
 ---
