@@ -20,11 +20,11 @@ The goal of this project is **not to claim an industry-grade system**, but to:
 ✔ Detects number plate regions using **OpenCV contour-based techniques**  
 ✔ Performs text recognition using **EasyOCR**  
 ✔ Applies **post-processing** to clean OCR output  
-✔ Handles real-world challenges such as:
-     - Indian plate fonts
-     - logos like `IND`
-     - borders and uneven spacing
-     - partial detection failures  
+✔ Handles real-world challenges such as:<br>
+     - Indian plate fonts<br>
+     - logos like `IND`<br>
+     - borders and uneven spacing<br>
+     - partial detection failures  <br>
 ✔ Displays the detected plate and recognized text on the image  
 
 ---
