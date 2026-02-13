@@ -47,7 +47,14 @@ result = sorted(result, key=lambda r: r[0][0][0])
 raw_text = " ".join([r[1] for r in result])
 print("Raw OCR:", raw_text)
 
-#
+# ---------------- Clean & format ----------------
+raw_text = raw_text.replace("IND", "")
+raw_text = re.sub(r"[^A-Z0-9]", "", raw_text)
+
+match = re.search(r"([A-Z]{2})(\d{2})([A-Z]{1,2})(\d{4})", raw_text)
+final_plate = "".join(match.groups()) if match else raw_text
+
+print("Detected Number Plate:", final_plate)
 
 # ---------------- Show result ----------------
 cv2.putText(
