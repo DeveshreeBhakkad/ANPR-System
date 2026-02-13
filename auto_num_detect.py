@@ -9,10 +9,6 @@ img = cv2.imread("Images/img1.jpg")
 if img is None:
     raise FileNotFoundError("Image not found")
 
-# ---------------- Preprocessing ----------------
-gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-gray = cv2.bilateralFilter(gray, 11, 17, 17)
-edged = cv2.Canny(gray, 30, 200)
 
 # ---------------- Find contours ----------------
 contours, _ = cv2.findContours(
