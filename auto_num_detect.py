@@ -32,13 +32,6 @@ for c in contours:
             break
 
 # ---------------- Fallback logic ----------------
-if plate_cnt is None:
-    print("Plate contour not found. Using full image for OCR.")
-    plate_img = img.copy()
-else:
-    x, y, w, h = cv2.boundingRect(plate_cnt)
-    plate_img = img[y:y+h, x:x+w]
-    cv2.drawContours(img, [plate_cnt], -1, (0, 255, 0), 3)
 
 # ---------------- OCR (spatial sorting) ----------------
 result = reader.readtext(plate_img)
