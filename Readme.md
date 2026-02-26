@@ -1,6 +1,6 @@
 # 🚘 Automatic Number Plate Recognition (ANPR)
 
-> *“Engineering is not about building perfect systems — it’s about understanding limitations and making conscious design decisions.”*
+
 
 ---
 
