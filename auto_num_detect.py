@@ -14,22 +14,7 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 gray = cv2.bilateralFilter(gray, 11, 17, 17)
 edged = cv2.Canny(gray, 30, 200)
 
-# ---------------- Find contours ----------------
-contours, _ = cv2.findContours(
-    edged, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE
-)
-contours = sorted(contours, key=cv2.contourArea, reverse=True)
 
-plate_cnt = None
-for c in contours:
-    peri = cv2.arcLength(c, True)
-    approx = cv2.approxPolyDP(c, 0.02 * peri, True)
-
-    if 4 <= len(approx) <= 8:
-        x, y, w, h = cv2.boundingRect(approx)
-        if 2 < w / float(h) < 6 and cv2.contourArea(c) > 2000:
-            plate_cnt = approx
-            break
 
 # ---------------- Fallback logic ----------------
 if plate_cnt is None:
